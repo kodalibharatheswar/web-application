@@ -1,0 +1,129 @@
+/**
+ * Wishlist Page Styles
+ * Exact match to original Thymeleaf wishlist.html design
+ */
+
+.wishlist-page {
+  padding: 2rem 0 3rem;
+  background-color: #f8f9fa;
+  min-height: calc(100vh - 400px);
+}
+
+/* Page Header */
+.wishlist-page .page-header {
+  margin-bottom: 2rem;
+}
+
+.wishlist-page .page-header h1 {
+  font-family: var(--font-heading);
+  font-size: 2rem;
+  color: var(--dark);
+  margin: 0 0 0.5rem;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.wishlist-page .page-header h1 i {
+  color: var(--clearance-red);
+}
+
+.wishlist-count {
+  color: #666;
+  font-size: 1rem;
+  margin: 0;
+}
+
+/* Empty Wishlist State */
+.empty-wishlist {
+  text-align: center;
+  padding: 4rem 2rem;
+  background: white;
+  border-radius: 8px;
+  box-shadow: var(--shadow-sm);
+}
+
+.empty-wishlist i {
+  color: #ffc0cb;
+  margin-bottom: 1.5rem;
+}
+
+.empty-wishlist h3 {
+  font-family: var(--font-heading);
+  font-size: 1.75rem;
+  color: var(--dark);
+  margin-bottom: 1rem;
+}
+
+.empty-wishlist p {
+  color: #666;
+  font-size: 1.125rem;
+  margin-bottom: 2rem;
+}
+
+/* Wishlist Grid */
+.wishlist-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2rem;
+}
+
+.wishlist-item {
+  position: relative;
+}
+
+.btn-remove-wishlist {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  z-index: 10;
+  width: 36px;
+  height: 36px;
+  background-color: white;
+  border: 2px solid var(--clearance-red);
+  border-radius: 50%;
+  color: var(--clearance-red);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.125rem;
+  transition: all 0.3s;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+}
+
+.btn-remove-wishlist:hover {
+  background-color: var(--clearance-red);
+  color: white;
+  transform: scale(1.1);
+}
+
+/* Responsive */
+@media (max-width: 1200px) {
+  .wishlist-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 992px) {
+  .wishlist-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .wishlist-page {
+    padding: 1rem 0 2rem;
+  }
+  
+  .wishlist-page .page-header h1 {
+    font-size: 1.5rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .wishlist-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+}

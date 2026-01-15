@@ -1,0 +1,37 @@
+/**
+ * Sale Badge Styles
+ * Blue for regular sales, Red for clearance (50%+)
+ */
+
+.sale-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  padding: 6px 12px;
+  border-radius: 4px;
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+}
+
+.sale-badge.sale {
+  background-color: var(--sale-blue);
+  color: white;
+}
+
+.sale-badge.clearance {
+  background-color: var(--clearance-red);
+  color: white;
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+}

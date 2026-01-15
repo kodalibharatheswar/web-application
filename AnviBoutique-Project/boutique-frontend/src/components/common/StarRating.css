@@ -1,0 +1,25 @@
+/**
+ * Star Rating Styles
+ */
+
+.star-rating {
+  display: inline-flex;
+  gap: 0.25rem;
+  color: #ffc107;
+}
+
+.star-rating i {
+  font-size: 1rem;
+}
+
+.star-rating.small i {
+  font-size: 0.875rem;
+}
+
+.star-rating.large i {
+  font-size: 1.5rem;
+}
+
+.star-rating .far {
+  color: #ddd;
+}
